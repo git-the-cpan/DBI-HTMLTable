@@ -1,0 +1,53 @@
+DBI::HTMLTable Installation
+
+Please remember that this software has not been tested thoroughly,
+only on Solaris with an Apache version 1.3.19 server.  Refer all 
+questions and problem reports to the author, rkiesling@mainmatter.com.
+
+
+System requirements:
+
+1.  A Unix or derivative operating system.
+2.  Perl version 5.004 or greater.
+3.  Perl DBI and DBD modules for your database server.
+4.  Apache with mod_cgi and Perl CGI.pm
+5.  GNU make.
+
+
+Installation:
+
+1.  Unpack the archive, substitute the actual version in the 
+    commands:
+
+    $ tar zxvf DBI-HTMLTable-<version>.tar.gz   # GNU Tar
+
+    $ gunzip -c DBI-HTMLTable-<version>.tar.gz | tar xvf -  # Standard tar
+
+2.  Change to the top-level subdirectory:
+
+    $ cd DBI-HTMLTable-<version>
+
+3.  The top-level Makefile should work on any Unix or derivative
+    system.  It uses the host system's Perl installation to 
+    build the package Makefiles.  At the prompt, type:
+
+    $ perl Makefile.PL
+
+4.  Build the program modules and documentation.  Type:
+
+    $ make
+
+5.  If necessary, become root (via "su", for example), and 
+    install the source files and documentation in the system's 
+    site_perl library, and the "browser" script in 
+    /usr/local/bin, using the "make install" command:
+
+  $ su
+  Enter Password:
+  # make install
+
+
+Copyright:
+
+This software is distributed under the Perl Artistic License.
+Please refer to the file "Artistic" in this directory.
